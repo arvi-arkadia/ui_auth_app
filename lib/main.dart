@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_auth_app/constants.dart';
+import 'package:ui_auth_app/screens/welcome/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Auth App',
-      theme: ThemeData(),
-      home: const Scaffold(),
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: WelcomeScreen(),
     );
   }
 }
